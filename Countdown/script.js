@@ -42,8 +42,9 @@ setTimeout(function()
 	},3500);
 	setTimeout (function()
 	{
-		var timer=document.getElementsById('timer');
+		var timer=document.getElementById('timer');
 		unfade(timer);
+		console.log(11);
 	},4000);
 
 

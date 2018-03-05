@@ -1,3 +1,4 @@
+
 body
 {
 	margin:0;
@@ -18,14 +19,16 @@ body
   height: auto;
   z-index: 108;
   display: block;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: floating 3s infinite;
+  -webkit-animation: floating 3s infinite;
+  -moz-animation: floating 3s infinite;
+  -o-animation: floating 3s infinite;
+  -ms-animation: floating 3s infinite;
   opacity: 0;
 }
 
 #stars {
+  background:url("images/stars.png");
   position: absolute;
   width:100%;
   height: 100%;
@@ -33,11 +36,10 @@ body
   display: block;
   opacity: 0;
   animation: fade 2s infinite;
-  -webkit-animation: fade 2s infinite;
-  -moz-animation: fade 2s infinite;
-  -o-animation: fade 2s infinite;
-  -ms-animation: fade 2s infinite;
-  animation-delay: 3s;
+  -webkit-animation: fade 2s 3s infinite;
+  -moz-animation: fade 2s 3s infinite;
+  -o-animation: fade 2s 3s infinite;
+  -ms-animation: fade 2s 3s infinite;
 }
 
 #stairs {
@@ -48,10 +50,11 @@ body
   height: auto;
   z-index: 107;
   display: block;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: floating 3s infinite;
+  -webkit-animation: floating 3s infinite;
+  -moz-animation: floating 3s infinite;
+  -o-animation: floating 3s infinite;
+  -ms-animation: floating 3s infinite;
   opacity: 0;
 }
 
@@ -63,10 +66,11 @@ body
   height: auto;
   z-index: 109;
   display: block;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: floating 3s infinite;
+  -webkit-animation: floating 3s infinite;
+  -moz-animation: floating 3s infinite;
+  -o-animation: floating 3s infinite;
+  -ms-animation: floating 3s infinite;
   opacity: 0;
 }
 #boat
@@ -78,12 +82,12 @@ body
 	left:31%;
 	bottom:5%;
 	display: block;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+ animation: floating 3s infinite;
+  -webkit-animation: floating 3s infinite;
+  -moz-animation: floating 3s infinite;
+  -o-animation: floating 3s infinite;
+  -ms-animation: floating 3s infinite;
   opacity: 0;
-
 }
 #hawk {
   position: absolute;
@@ -94,7 +98,10 @@ body
   display: block;
   opacity: 0;
   animation: fade2 4s infinite;
-  animation-delay: 4s;
+  -webkit-animation: fade2 4s 4s infinite;
+  -moz-animation: fade2 4s 4s infinite;
+  -o-animation: fade2 4s 4s infinite;
+  -ms-animation: fade2 4s 4s infinite;
 }
   #box
 {  display: flex;
@@ -113,22 +120,22 @@ body
   justify-content: center;
   margin:auto;
   opacity: 0;
+  font-size: 2.5vw;
 }
 #d, #m, #h, #s
 {
-  font-size: 2.5vw;
 }
 #text
 {
   position: absolute;
-  right:0;
-  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   color:white;
-  width:27%;
-  margin: auto;
-  font-size:2.5vw;
+  width:100%;
+  font-size:4vw;
   z-index: 200;
-  padding: 1vw;
+  margin:auto;
   opacity: 0;
   
 }
@@ -145,4 +152,22 @@ body
 @keyframes fade2 {
   0%,100% { opacity: 0.7 }
   50% { opacity: 1 }
+}
+
+@media only screen and (max-width:678px)
+{
+  #text
+  {
+    font-size: 7vw;
+    top:4vw;
+  }
+  #timer
+  {
+    font-size: 5vw;
+    padding: 8% 0%;
+  }
+  #stuff
+  {
+    transform: scale(2);
+  }
 }
