@@ -170,6 +170,7 @@ body
 @media only screen and  (max-width: 1024px)
 {
 
+  
 
   .message-container
   {
@@ -181,11 +182,11 @@ body
   }
   #text
   {
-    font-size: 7vh;
+    font-size: 7.5vh;
   }
   #box
   {
-    font-size: 5vh;
+    font-size: 5.7vh;
     padding: 7px;
   }
   #stuff
@@ -198,7 +199,7 @@ body
 }
 @media only screen and (max-width:577px)
 {
-  
+
   #stuff
   {
     transform: translateX(22px) scale(2.5);
@@ -215,11 +216,11 @@ body
   }
   #text
   {
-    font-size: 7vw;
+    font-size: 7.5vw;
   }
   #box
   {
-    font-size: 5vw;
+    font-size: 5.7vw;
     padding: 7px;
   }
 }
