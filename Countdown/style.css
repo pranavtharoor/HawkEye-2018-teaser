@@ -169,6 +169,10 @@ body
 
 @media only screen and  (max-width: 1024px)
 {
+  #stars
+  {
+    background-size: 50%;
+  }
 
   #boat{
     bottom:85px;
