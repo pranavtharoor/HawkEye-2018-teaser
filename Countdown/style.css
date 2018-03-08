@@ -93,11 +93,11 @@ body
 #boat
 {
 	position:absolute;
-	width:25%;
+	width:22%;
 	height: auto;
 	z-index: 106;
-	left:34.5%;
-	bottom:5%;
+	left:36%;
+	bottom:100px;
 	display: block;
  animation: floating 3s infinite;
   -webkit-animation: floating 3s infinite;
@@ -109,9 +109,9 @@ body
 #hawk {
   position: absolute;
   left: 6%;
-  bottom:60%;
+  bottom:55%;
   width:20%;
-  z-index: 500;
+  z-index: 299;
   display: block;
   opacity: 0;
   animation: fade2 4s infinite;
@@ -170,7 +170,14 @@ body
 @media only screen and  (max-width: 1024px)
 {
 
-  
+  #boat{
+    bottom:85px;
+  }
+  #hawk
+  {
+    width: 30%;
+    top:35%;
+  }
 
   .message-container
   {
@@ -182,11 +189,11 @@ body
   }
   #text
   {
-    font-size: 7.5vh;
+    font-size: 6.6vh;
   }
   #box
   {
-    font-size: 5.7vh;
+    font-size: 4.6vh;
     padding: 7px;
   }
   #stuff
@@ -199,6 +206,16 @@ body
 }
 @media only screen and (max-width:577px)
 {
+
+  #boat{
+    bottom: 35px;
+  }
+  #hawk
+  {
+    width: 30%;
+    top:30%;
+  }
+
 
   #stuff
   {
