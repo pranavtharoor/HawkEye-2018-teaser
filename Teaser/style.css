@@ -1,11 +1,4 @@
-.monuments
-{
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  position: absolute;
-  z-index: 25;
-}
+
 
 .container { 
   width: 250px;
@@ -25,6 +18,9 @@
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1; /* Firefox */
+  column-count: 1;
 
 }
 
@@ -50,11 +46,59 @@
   background-size: cover;
 }
 .card .back {
-  background: url('images/pyramids.png');
+  background: url('images/back.png');
   background-size: cover;
   transform: rotateY( 180deg );
 }
 
 .flipped {
   transform: rotateY( 180deg );
+}
+
+.image
+{
+  width: 70%;
+  height: auto;
+  flex-grow: 1;
+}
+.content
+{
+  padding: 25px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#text
+{
+  font-family: 'Reem Kufi', sans-serif;
+  overflow:clip;
+  padding: 5px;
+  flex-grow: 1;
+  text-align: center;
+  color:#4d4d4d;
+}
+
+@media only screen and (max-width: 623px) 
+{
+  .container
+  {
+    margin:0px;
+
+  }
+  .card
+  {
+    box-shadow: 0px -10px 10px #181818;
+  }
+  
+  .one
+  {
+    box-shadow: none;
+  }
+  
+  
 }
