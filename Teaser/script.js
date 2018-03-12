@@ -8,9 +8,6 @@ window.onload=function()
     card[i].addEventListener('click', function(){
 
       this.classList.toggle("flipped");
-
-
-
     });
   }
 
@@ -27,7 +24,6 @@ window.onload=function()
     // If media query matches
        for (var i = 0; i < card.length; i++) 
         {
-
             card[i].style.zIndex=i+1;
             card[i].style.top=-100*i+'px';
         }
@@ -36,40 +32,31 @@ window.onload=function()
         {
             card[i].addEventListener('click', separateCards);
             
-            card[i].addEventListener('click', function()
+            card[i].addEventListener('click', function(e)
             {
-                 if (k==0)
-                {
-                  
-                  window.scrollTo(0,50*i);
-                  k=1;
-                  console.log(i);
-                }
+              // console.log(e);
+              // see the event structure after uncommenting the line above.
+              // the "path" definition contains the heirarchy of the element clicked.
+              // each of the elements of the "path array" corresponds to parents of the element clicked on.
+              if(k==0)
+              {           
+                var num = parseInt(e.path[1].dataset.key) - 1;
+                //to get the corresponding value of i
+                card[num].scrollIntoView({behavior: "instant", block: "center", inline: "nearest"}); 
+                //simpler way than scrollTo to ensure the element always shows up in the middle of the screen.
+                k=1;
+               }      
             });
-
-
         }
     } 
   }
 
- 
-
-  function separateCards()
+  function separateCards(e)
   {
-
     for (var i = 0; i < card.length; i++) 
     {
-            card[i].style.top=100*i+'px';
-            card[i].style.boxShadow="none";
+      card[i].style.top=100*i+'px';
+      card[i].style.boxShadow="none";
     }
   }
 }
-
-
-
-
-
-  
-
-
-
