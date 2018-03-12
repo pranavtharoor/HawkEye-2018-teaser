@@ -1,5 +1,4 @@
 
-
 .container { 
   width: 250px;
   height: 371px;
@@ -76,7 +75,7 @@
 #text
 {
   font-family: 'Reem Kufi', sans-serif;
-  overflow:clip;
+  overflow:auto;
   padding: 5px;
   flex-grow: 1;
   text-align: center;

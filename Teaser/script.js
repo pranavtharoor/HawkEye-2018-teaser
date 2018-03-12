@@ -20,7 +20,8 @@ window.onload=function()
    var x = window.matchMedia("(max-width: 632px)");
   onSizeChange(x) ;
   x.addListener(onSizeChange);
-  function onSizeChange(x) {
+  function onSizeChange(x) 
+  {
     if (x.matches) 
     {
     // If media query matches
@@ -30,14 +31,27 @@ window.onload=function()
             card[i].style.zIndex=i+1;
             card[i].style.top=-100*i+'px';
         }
-          for (var i = 0; i < card.length; i++) {
+        var k=0;
+        for (var i = 0; i < card.length; i++)
+        {
             card[i].addEventListener('click', separateCards);
-          
+            
+            card[i].addEventListener('click', function()
+            {
+                 if (k==0)
+                {
+                  
+                  window.scrollTo(0,50*i);
+                  k=1;
+                  console.log(i);
+                }
+            });
+
+
         }
-    
-    }
+    } 
   }
-  
+
  
 
   function separateCards()
@@ -50,6 +64,8 @@ window.onload=function()
     }
   }
 }
+
+
 
 
 
