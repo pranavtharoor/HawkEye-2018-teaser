@@ -1,7 +1,15 @@
-
+body
+{
+  background:url('images/background.png');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  background-position: right top;
+  background-attachment: fixed;
+}
 .container { 
-  width: 250px;
-  height: 371px;
+  width: 240px;
+  height: 357px;
   position: relative;
   perspective: 800px;
   margin: 30px;
@@ -17,9 +25,9 @@
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  -webkit-column-count: 1; /* Chrome, Safari, Opera */
-  -moz-column-count: 1; /* Firefox */
-  column-count: 1;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
 
 }
 
@@ -29,6 +37,8 @@
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
+  box-shadow: 10px 10px 20px black;
+  border-radius: 10px;
 }
 
 .card figure {
@@ -69,7 +79,7 @@
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 #text
@@ -98,6 +108,9 @@
   {
     box-shadow: none;
   }
-  
+  body
+  {
+    background-repeat: repeat-y;
+  }
   
 }

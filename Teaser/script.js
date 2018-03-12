@@ -29,7 +29,7 @@ window.onload=function()
         {
 
             card[i].style.zIndex=i+1;
-            card[i].style.top=-100*i+'px';
+            card[i].style.top=-90*i+'px';
         }
         var k=0;
         for (var i = 0; i < card.length; i++)
@@ -58,8 +58,8 @@ window.onload=function()
 
     for (var i = 0; i < card.length; i++) 
     {
-            card[i].style.top=100*i+'px';
-            card[i].style.boxShadow="none";
+            card[i].style.top=50*i+'px';
+            card[i].style.boxShadow="10px 10px 20px black";
     }
   }
 }
