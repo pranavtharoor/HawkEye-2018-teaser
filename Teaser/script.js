@@ -36,14 +36,13 @@ window.onload=function()
         {
             card[i].addEventListener('click', separateCards);
             
-            card[i].addEventListener('click', function()
+            card[i].addEventListener('click', function(e)
             {
                  if (k==0)
                 {
-                  
-                  window.scrollTo(0,50*i);
+                  var num = parseInt(e.path[1].dataset.key) - 1;
+                  card[num].scrollIntoView({behavior: "instant", block: "center", inline: "nearest"}); 
                   k=1;
-                  console.log(i);
                 }
             });
 
