@@ -6,6 +6,7 @@ body
   height: 100%;
   background-position: right top;
   background-attachment: fixed;
+  margin:0;
 }
 .container { 
   width: 240px;
